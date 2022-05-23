@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Creat Your New account</h2>
+  <p class="lead">Select below the type of account you want to create</p>
+  <a href="{% url 'patientSignup' %}" class="btn btn-student btn-lg" role="button">I'm a patient</a>
+  <a href="{% url 'doctorSignup' %}" class="btn btn-teacher btn-lg" role="button">I'm a doctor</a>
+  <a href="{% url 'pharmacistSignup' %}" class="btn btn-teacher btn-lg" role="button">I'm a pharmacist</a>
+  <a href="{% url 'laboratorySignup' %}" class="btn btn-teacher btn-lg" role="button">I'm a laboratory</a>
+
+{% endblock %}
+</body>
+</html>

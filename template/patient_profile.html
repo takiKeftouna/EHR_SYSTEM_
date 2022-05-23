@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ {% if user.is_patient %}
+  <h2>welcom  {{ user_type }} : {{user.username}}</h2>
+{%else%}
+
+  <a href="{% url 'patient:patient_profile:records:record_url'%}" class="btn btn-light" role="button">creat_record</a>
+
+{%endif%}
+{% endblock %}
+</body>
+</html>

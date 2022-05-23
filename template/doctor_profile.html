@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>welcom  {{ user_type }}  : {{ user.username }}</h2>
+
+<h3> patient searching : </h3>
+<form action="{% url 'patient:patient_profile' %}" method="get">
+  <input name="search" type="text" placeholder="Search for patient ...">
+  <button type="submit" class="btn btn-primary btn-lg mb-2">search</button>
+<div>
+
+</div>
+</form>
+{% endblock %}
+</body>
+</html>

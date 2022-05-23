@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>hello world </h1>
+  <a href="{% url 'patient:patient_profile:records:eprescription_url'%}" class="btn btn-light" role="button">creat E-prescription</a></br>
+  <a href="{% url 'patient:patient_profile:records:medicale_report_url'%}" class="btn btn-light" role="button">creat Reoprt medicale</a></br>
+  <a href="{% url 'patient:patient_profile:records:medicale_certeficate_url'%}" class="btn btn-light" role="button">creat medicale certeficate</a></br>
+  <a href="{% url 'patient:patient_profile:records:required_analeses_url'%}" class="btn btn-light" role="button">creat required analyses</a></br>
+  <a href="{% url 'patient:patient_profile'%}" class="btn btn-light" role="button">return to Profile</a></br>
+
+{% endblock %}
