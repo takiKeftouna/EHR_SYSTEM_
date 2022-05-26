@@ -22,8 +22,8 @@ from accounts.views.doctorViews import search
 #   return HttpResponse(template.render())
 users = get_user_model()
 @doctor_required
-def record_view(request):
-    uid = users.objects.get(username='patient1')
+def record_view(request,username):
+    uid = users.objects.get(username=username)
     record=ElRecord(ER_doctor = request.user,
                     ER_patient=uid,
                     # ER_date_creation= timezone.now(),

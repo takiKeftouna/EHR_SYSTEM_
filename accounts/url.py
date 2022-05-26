@@ -5,7 +5,7 @@ import record
 urlpatterns = [
     path('',ehr_home_registration.home, name='home'),
     path('patient/', include(([
-        path('patient_profile/', patientViews.PatientProfileView.as_view(),name='patient_profile'),
+        path('patient_profile/<str:username>/', patientViews.patientProfileView,name='patient_profile'),
         path('patient_profile/',include((('record.url'),'accounts'),namespace='patient_profile'))
         # path('', include(('home.urls', 'home'), namespace='home'))
     ], 'accounts'), namespace='patient')),

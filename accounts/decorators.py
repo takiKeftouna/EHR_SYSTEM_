@@ -16,7 +16,7 @@ def doctor_required(function=None , redirect_field_name=REDIRECT_FIELD_NAME,logi
 
 def patient_required(function = None , redirect_field_name=REDIRECT_FIELD_NAME,login_ur ='login'):
     actual_decorator = user_passes_test(
-        lambda u: u.is_active and (u.is_patient or u.is_doctor)  ,
+        lambda u: u.is_active and (u.is_patient)  ,
         login_url=login_ur,
         redirect_field_name=redirect_field_name)
     if function:
